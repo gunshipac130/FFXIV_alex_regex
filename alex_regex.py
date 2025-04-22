@@ -85,8 +85,6 @@ for line in textfile:
         HolderArray[6] = addExtracted(tempstring)
 
 print(HolderArray, "\n")
-
-
 print("{")
 print("	\"C2S_ActionRequest\": \"" + HolderArray[0]+ "\",")
 print("	\"C2S_ActionRequestGroundTargeted\": \"" + HolderArray[1]+ "\",")
@@ -102,7 +100,6 @@ print("	\"S2C_ActorControl\": \"" + HolderArray[8]+ "\",")
 print("	\"S2C_ActorControlSelf\": \"" + HolderArray[9]+ "\",")
 print("	\"Server_IpRange\": \"0.0.0.0/0\",")
 print("	\"Server_PortRange\": \"1-65535\"")
+print("}\n")
 
-
-
-print("}")
+input("Press Enter to continue...")
