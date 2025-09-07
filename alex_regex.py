@@ -1,4 +1,5 @@
 import re
+import pyperclip
 
 HolderArray = [False, False, False, False, False, False, False, False, False, False]
 
@@ -65,22 +66,49 @@ S2C_ActorCast = str(HolderArray[7])  #7
 S2C_ActorControl = str(HolderArray[8])   #8
 S2C_ActorControlSelf = str(HolderArray[9])   #9
 
-print(HolderArray, "\n")
-print("{")
-print("	\"C2S_ActionRequest\": \"" + C2S_ActionRequest + "\",")
-print("	\"C2S_ActionRequestGroundTargeted\": \"" + C2S_ActionRequestGroundTargeted + "\",")
-print("	\"Common_UseOodleTcp\": true,")
-print("	\"PatchCode\": [],")
-print("	\"S2C_ActionEffect01\": \"" + S2C_ActionEffect01 + "\",")
-print("	\"S2C_ActionEffect08\": \"" + S2C_ActionEffect08 + "\",")
-print("	\"S2C_ActionEffect16\": \"" + S2C_ActionEffect16 + "\",")
-print("	\"S2C_ActionEffect24\": \"" + S2C_ActionEffect24 + "\",")
-print("	\"S2C_ActionEffect32\": \"" + S2C_ActionEffect32 + "\",")
-print("	\"S2C_ActorCast\": \"" + S2C_ActorCast + "\",")
-print("	\"S2C_ActorControl\": \"" + S2C_ActorControl + "\",")
-print("	\"S2C_ActorControlSelf\": \"" + S2C_ActorControlSelf + "\",")
-print("	\"Server_IpRange\": \"0.0.0.0/0\",")
-print("	\"Server_PortRange\": \"1-65535\"")
-print("}\n")
+########## Printing ##########
 
-input("Press Enter to continue...")
+print(HolderArray, "\n")
+
+l01 = "{"
+l02 = "	\"C2S_ActionRequest\": \"" + C2S_ActionRequest + "\","
+l03 = "	\"C2S_ActionRequestGroundTargeted\": \"" + C2S_ActionRequestGroundTargeted + "\","
+l04 = "	\"Common_UseOodleTcp\": true,"
+l05 = "	\"PatchCode\": [],"
+l06 = "	\"S2C_ActionEffect01\": \"" + S2C_ActionEffect01 + "\","
+l07 = "	\"S2C_ActionEffect08\": \"" + S2C_ActionEffect08 + "\","
+l08 = "	\"S2C_ActionEffect16\": \"" + S2C_ActionEffect16 + "\","
+l09 = "	\"S2C_ActionEffect24\": \"" + S2C_ActionEffect24 + "\","
+l10 = "	\"S2C_ActionEffect32\": \"" + S2C_ActionEffect32 + "\","
+l11 = "	\"S2C_ActorCast\": \"" + S2C_ActorCast + "\","
+l12 = "	\"S2C_ActorControl\": \"" + S2C_ActorControl + "\","
+l13 = "	\"S2C_ActorControlSelf\": \"" + S2C_ActorControlSelf + "\","
+l14 = "	\"Server_IpRange\": \"0.0.0.0/0\","
+l15 = "	\"Server_PortRange\": \"1-65535\""
+l16 = "}\n"
+textt = f"{l01}\n{l02}\n{l03}\n{l04}\n{l05}\n{l06}\n{l07}\n{l08}\n{l09}\n{l10}\n{l11}\n{l12}\n{l13}\n{l14}\n{l15}\n{l16}"
+
+pyperclip.copy(textt)   # copy string to clipboard
+
+print(pyperclip.paste())    # print clipboard
+
+print(">> Clipboarded\n")
+input("Press Enter to exit...")
+
+### old stuff
+# print("{")
+# print("	\"C2S_ActionRequest\": \"" + C2S_ActionRequest + "\",")
+# print("	\"C2S_ActionRequestGroundTargeted\": \"" + C2S_ActionRequestGroundTargeted + "\",")
+# print("	\"Common_UseOodleTcp\": true,")
+# print("	\"PatchCode\": [],")
+# print("	\"S2C_ActionEffect01\": \"" + S2C_ActionEffect01 + "\",")
+# print("	\"S2C_ActionEffect08\": \"" + S2C_ActionEffect08 + "\",")
+# print("	\"S2C_ActionEffect16\": \"" + S2C_ActionEffect16 + "\",")
+# print("	\"S2C_ActionEffect24\": \"" + S2C_ActionEffect24 + "\",")
+# print("	\"S2C_ActionEffect32\": \"" + S2C_ActionEffect32 + "\",")
+# print("	\"S2C_ActorCast\": \"" + S2C_ActorCast + "\",")
+# print("	\"S2C_ActorControl\": \"" + S2C_ActorControl + "\",")
+# print("	\"S2C_ActorControlSelf\": \"" + S2C_ActorControlSelf + "\",")
+# print("	\"Server_IpRange\": \"0.0.0.0/0\",")
+# print("	\"Server_PortRange\": \"1-65535\"")
+# print("}\n")
